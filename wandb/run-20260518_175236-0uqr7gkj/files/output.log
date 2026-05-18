@@ -1,0 +1,672 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai/
+
+================================================================================
+Loading model with dtype: torch.bfloat16
+Using attention implementation: flash_attention_2
+================================================================================
+
+[DataCollator] Original padding_side: left
+[DataCollator] Set padding_side to: right
+[DataCollator] Reason first mode: False
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards: 100%|████████████████████████████| 4/4 [00:00<00:00, 13.29it/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:00<00:02,  1.04it/s]
+Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:02<00:02,  1.06s/it]
+Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:03<00:01,  1.07s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:03<00:00,  1.11it/s]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:03<00:00,  1.05it/s]
+
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|█| 3/3 [00:00<00:00,  7.22it
+Capturing CUDA graphs (decode, FULL): 100%|█████████████████| 2/2 [00:00<00:00,  8.26it/s]
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 151645, 'bos_token_id': None, 'pad_token_id': 151643}.
+  0%|                                                            | 0/3680 [00:00<?, ?it/s]`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+vLLM generation done - elapsed time: 11.77s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 87.0 tok/s
+/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+vLLM generation done - elapsed time: 11.58s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 88.4 tok/s
+  0%|                                                 | 1/3680 [00:26<27:06:18, 26.52s/it]/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+vLLM generation done - elapsed time: 11.56s, prompts: 1, total tokens: 338, avg length: 338.0, speed: 29.2 tok/s
+  warnings.warn(
+vLLM generation done - elapsed time: 11.21s, prompts: 1, total tokens: 521, avg length: 521.0, speed: 46.5 tok/s
+  0%|▏                                               | 10/3680 [04:31<27:42:42, 27.18s/it]
+{'loss': 0.0007, 'grad_norm': 0.03876565396785736, 'learning_rate': 4.998641304347826e-06, 'on_policy_loss': 0.0007, 'epoch': 0.0}
+vLLM generation done - elapsed time: 8.34s, prompts: 1, total tokens: 213, avg length: 213.0, speed: 25.5 tok/s
+vLLM generation done - elapsed time: 10.97s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.4 tok/s
+vLLM generation done - elapsed time: 11.88s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 86.2 tok/s
+vLLM generation done - elapsed time: 11.25s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.1 tok/s
+{'loss': 0.0036, 'grad_norm': 0.029430972412228584, 'learning_rate': 4.995923913043479e-06, 'on_policy_loss': 0.0036, 'epoch': 0.0}
+vLLM generation done - elapsed time: 11.30s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.6 tok/s
+vLLM generation done - elapsed time: 11.58s, prompts: 1, total tokens: 524, avg length: 524.0, speed: 45.2 tok/s
+vLLM generation done - elapsed time: 11.62s, prompts: 1, total tokens: 824, avg length: 824.0, speed: 70.9 tok/s
+vLLM generation done - elapsed time: 10.80s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 94.8 tok/s
+
+================================================================================
+Saved 12 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_5.json
+================================================================================
+
+{'loss': 0.0031, 'grad_norm': 0.04416859149932861, 'learning_rate': 4.99320652173913e-06, 'on_policy_loss': 0.0031, 'epoch': 0.0}
+vLLM generation done - elapsed time: 11.65s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 87.9 tok/s
+vLLM generation done - elapsed time: 11.57s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 88.5 tok/s
+vLLM generation done - elapsed time: 11.26s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.0 tok/s
+vLLM generation done - elapsed time: 11.68s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 87.6 tok/s
+{'loss': 0.0017, 'grad_norm': 0.03206978365778923, 'learning_rate': 4.990489130434783e-06, 'on_policy_loss': 0.0017, 'epoch': 0.0}
+vLLM generation done - elapsed time: 11.59s, prompts: 1, total tokens: 197, avg length: 197.0, speed: 17.0 tok/s
+vLLM generation done - elapsed time: 10.09s, prompts: 1, total tokens: 473, avg length: 473.0, speed: 46.9 tok/s
+vLLM generation done - elapsed time: 11.59s, prompts: 1, total tokens: 925, avg length: 925.0, speed: 79.8 tok/s
+vLLM generation done - elapsed time: 7.25s, prompts: 1, total tokens: 672, avg length: 672.0, speed: 92.7 tok/s
+{'loss': 0.0017, 'grad_norm': 0.02798956260085106, 'learning_rate': 4.9877717391304354e-06, 'on_policy_loss': 0.0017, 'epoch': 0.0}
+vLLM generation done - elapsed time: 10.89s, prompts: 1, total tokens: 482, avg length: 482.0, speed: 44.3 tok/s
+vLLM generation done - elapsed time: 10.76s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 95.2 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_10.json
+================================================================================
+
+vLLM generation done - elapsed time: 10.41s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 98.4 tok/s
+vLLM generation done - elapsed time: 10.68s, prompts: 1, total tokens: 739, avg length: 739.0, speed: 69.2 tok/s
+{'loss': 0.001, 'grad_norm': 0.02516743168234825, 'learning_rate': 4.985054347826087e-06, 'on_policy_loss': 0.001, 'epoch': 0.0}
+vLLM generation done - elapsed time: 11.39s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 89.9 tok/s
+vLLM generation done - elapsed time: 11.20s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.4 tok/s
+vLLM generation done - elapsed time: 10.87s, prompts: 1, total tokens: 988, avg length: 988.0, speed: 90.9 tok/s
+vLLM generation done - elapsed time: 11.88s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 86.2 tok/s
+{'loss': 0.0046, 'grad_norm': 0.033409684896469116, 'learning_rate': 4.98233695652174e-06, 'on_policy_loss': 0.0046, 'epoch': 0.0}
+vLLM generation done - elapsed time: 11.09s, prompts: 1, total tokens: 831, avg length: 831.0, speed: 75.0 tok/s
+vLLM generation done - elapsed time: 11.69s, prompts: 1, total tokens: 621, avg length: 621.0, speed: 53.1 tok/s
+vLLM generation done - elapsed time: 11.33s, prompts: 1, total tokens: 591, avg length: 591.0, speed: 52.2 tok/s
+vLLM generation done - elapsed time: 11.19s, prompts: 1, total tokens: 236, avg length: 236.0, speed: 21.1 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_15.json
+================================================================================
+
+{'loss': 0.001, 'grad_norm': 0.03489139676094055, 'learning_rate': 4.979619565217392e-06, 'on_policy_loss': 0.001, 'epoch': 0.0}
+vLLM generation done - elapsed time: 10.77s, prompts: 1, total tokens: 433, avg length: 433.0, speed: 40.2 tok/s
+vLLM generation done - elapsed time: 11.67s, prompts: 1, total tokens: 754, avg length: 754.0, speed: 64.6 tok/s
+vLLM generation done - elapsed time: 11.37s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.0 tok/s
+vLLM generation done - elapsed time: 10.99s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.2 tok/s
+{'loss': 0.0041, 'grad_norm': 0.041272006928920746, 'learning_rate': 4.976902173913044e-06, 'on_policy_loss': 0.0041, 'epoch': 0.0}
+vLLM generation done - elapsed time: 11.57s, prompts: 1, total tokens: 768, avg length: 768.0, speed: 66.4 tok/s
+vLLM generation done - elapsed time: 11.51s, prompts: 1, total tokens: 841, avg length: 841.0, speed: 73.0 tok/s
+vLLM generation done - elapsed time: 10.57s, prompts: 1, total tokens: 868, avg length: 868.0, speed: 82.1 tok/s
+vLLM generation done - elapsed time: 10.99s, prompts: 1, total tokens: 232, avg length: 232.0, speed: 21.1 tok/s
+{'loss': 0.0026, 'grad_norm': 0.03996428847312927, 'learning_rate': 4.9741847826086955e-06, 'on_policy_loss': 0.0026, 'epoch': 0.01}
+vLLM generation done - elapsed time: 10.90s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.9 tok/s
+
+================================================================================
+STUDENT GENERATION SAMPLE (Step 20):
+================================================================================
+
+Prompt:
+<|im_start|>user
+Problem: Let \( p(x) = x^4 + ax^3 + bx^2 + cx + d \), where \( a, b, c, d \) are constants, and given that \( p(1) = 1993 \), \( p(2) = 3986 \), and \( p(3) = 5979 \). Calculate \( \frac{1}{4} [p(11) + p(-7)] \).
+
+Please reason step by step, and put your final answer within \boxed{}.<|im_end|>
+<|im_start|>assistant
+
+
+Completion:
+We are given a quartic polynomial:
+
+$$
+p(x) = x^4 + ax^3 + bx^2 + cx + d
+$$
+
+and three values:
+
+$$
+p(1) = 1993,\quad p(2) = 3986,\quad p(3) = 5979
+$$
+
+We are to compute:
+
+$$
+\frac{1}{4} [p(11) + p(-7)]
+$$
+
+---
+
+First, observe the pattern in the given values:
+
+- $ p(1) = 1993 $
+- $ p(2) = 3986 = 2 \cdot 1993 $
+- $ p(3) = 5979 = 3 \cdot 1993 $
+
+So, it seems that $ p(n) = 1993n $ for $ n = 1,2,3 $.
+
+Let’s define a new function:
+
+$$
+q(x) = p(x) - 1993x
+$$
+
+Then,
+
+$$
+q(1) = p(1) - 1993 \cdot 1 = 0 \\
+q(2) = p(2) - 1993 \cdot 2 = 0 \\
+q(3) = p(3) - 1993 \cdot 3 = 0
+$$
+
+So, $ q(x) $ has roots at $ x = 1, 2, 3 $. Since $ p(x) $ is a degree-4 polynomial, $ q(x) $ is also degree-4 (since subtracting linear function doesn't reduce degree unless leading term cancels — but here it doesn’t, because leading term of $ p(x) $ is $ x^4 $, and $ 1993x $ is degree 1, so $ q(x) $ is degree 4).
+
+So we can write:
+
+$$
+q(x) = (x - 1)(x - 2)(x - 3)(x - r)
+$$
+
+for some constant $ r $, since $ q(x) $ is degree 4 and has 4 roots (counting multiplicity). The roots are 1, 2, 3, and one more root $ r $.
+
+Therefore,
+
+$$
+p(x) = q(x) + 1993x = (x - 1)(x - 2)(x - 3)(x - r) + 1993x
+$$
+
+Now, we want to compute:
+
+$$
+\frac{1}{4}[p(11) + p(-7)]
+$$
+
+Let’s compute each term:
+
+First, write:
+
+$$
+p(11) = (11 - 1)(11 - 2)(11 - 3)(11 - r) + 1993 \cdot 11 = 10 \cdot 9 \cdot 8 \cdot (11 - r) + 21923
+$$
+
+$$
+p(-7) = (-7 - 1)(-7 - 2)(-7 - 3)(-7 - r) + 1993 \cdot (-7) = (-8)(-9)(-10)(-7 - r) - 13951
+$$
+
+Let’s simplify step by step.
+
+---
+
+Compute $ p(11) $:
+
+$$
+10 \cdot 9 \cdot 8 = 720
+\Rightarrow p(11) = 720(11 - r) + 21923
+$$
+
+Compute $ p(-7) $:
+
+First, the product:
+
+$$
+(-8)(-9)(-10) = (-8)(90) = -720
+$$
+
+Wait: let’s check signs:
+
+-8 × -9 = 72
+
+72 × -10 = -720
+
+So:
+
+$$
+p(-7) = -720 \cdot (-7 - r) - 13951 = -720(-7 - r) - 13951
+$$
+
+Note: $ -720 \cdot (-7 - r) = 720(7 + r) $
+
+So:
+
+$$
+p(-7) = 720(7 + r) - 13951
+$$
+
+Now, compute $ p(11) + p(-7) $:
+
+$$
+p(11) + p(-7) = [720(11 - r) + 21923] + [720(7 + r) - 13951]
+$$
+
+Combine the terms:
+
+Group the $
+================================================================================
+
+vLLM generation done - elapsed time: 10.78s, prompts: 1, total tokens: 594, avg length: 594.0, speed: 55.1 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_20.json
+================================================================================
+
+vLLM generation done - elapsed time: 11.67s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 87.7 tok/s
+vLLM generation done - elapsed time: 11.20s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.4 tok/s
+{'loss': 0.0015, 'grad_norm': 0.0208191629499197, 'learning_rate': 4.971467391304348e-06, 'on_policy_loss': 0.0015, 'epoch': 0.01}
+vLLM generation done - elapsed time: 10.97s, prompts: 1, total tokens: 754, avg length: 754.0, speed: 68.7 tok/s
+vLLM generation done - elapsed time: 7.87s, prompts: 1, total tokens: 394, avg length: 394.0, speed: 50.1 tok/s
+vLLM generation done - elapsed time: 11.34s, prompts: 1, total tokens: 404, avg length: 404.0, speed: 35.6 tok/s
+vLLM generation done - elapsed time: 6.86s, prompts: 1, total tokens: 294, avg length: 294.0, speed: 42.9 tok/s
+{'loss': 0.0034, 'grad_norm': 0.033229634165763855, 'learning_rate': 4.9687500000000005e-06, 'on_policy_loss': 0.0034, 'epoch': 0.01}
+vLLM generation done - elapsed time: 11.10s, prompts: 1, total tokens: 546, avg length: 546.0, speed: 49.2 tok/s
+vLLM generation done - elapsed time: 11.13s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.0 tok/s
+vLLM generation done - elapsed time: 6.10s, prompts: 1, total tokens: 536, avg length: 536.0, speed: 87.9 tok/s
+  warnings.warn(
+vLLM generation done - elapsed time: 10.92s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.7 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_25.json
+================================================================================
+  1%|▍                                               | 35/3680 [15:41<27:00:37, 26.68s/it]
+
+{'loss': 0.0036, 'grad_norm': 0.03274261951446533, 'learning_rate': 4.966032608695653e-06, 'on_policy_loss': 0.0036, 'epoch': 0.01}
+vLLM generation done - elapsed time: 11.11s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.2 tok/s
+vLLM generation done - elapsed time: 12.11s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 84.5 tok/s
+vLLM generation done - elapsed time: 11.00s, prompts: 1, total tokens: 714, avg length: 714.0, speed: 64.9 tok/s
+vLLM generation done - elapsed time: 10.91s, prompts: 1, total tokens: 451, avg length: 451.0, speed: 41.3 tok/s
+{'loss': 0.0041, 'grad_norm': 0.0328599289059639, 'learning_rate': 4.963315217391305e-06, 'on_policy_loss': 0.0041, 'epoch': 0.01}
+vLLM generation done - elapsed time: 10.83s, prompts: 1, total tokens: 317, avg length: 317.0, speed: 29.3 tok/s
+vLLM generation done - elapsed time: 11.22s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.3 tok/s
+vLLM generation done - elapsed time: 7.99s, prompts: 1, total tokens: 387, avg length: 387.0, speed: 48.4 tok/s
+vLLM generation done - elapsed time: 11.27s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.8 tok/s
+{'loss': 0.005, 'grad_norm': 0.03823845088481903, 'learning_rate': 4.960597826086957e-06, 'on_policy_loss': 0.005, 'epoch': 0.01}
+vLLM generation done - elapsed time: 10.46s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 97.9 tok/s
+vLLM generation done - elapsed time: 10.90s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 94.0 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_30.json
+================================================================================
+
+vLLM generation done - elapsed time: 10.92s, prompts: 1, total tokens: 620, avg length: 620.0, speed: 56.8 tok/s
+vLLM generation done - elapsed time: 11.33s, prompts: 1, total tokens: 393, avg length: 393.0, speed: 34.7 tok/s
+{'loss': 0.0049, 'grad_norm': 0.028305575251579285, 'learning_rate': 4.957880434782609e-06, 'on_policy_loss': 0.0049, 'epoch': 0.01}
+vLLM generation done - elapsed time: 11.62s, prompts: 1, total tokens: 485, avg length: 485.0, speed: 41.7 tok/s
+vLLM generation done - elapsed time: 11.05s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.6 tok/s
+vLLM generation done - elapsed time: 9.82s, prompts: 1, total tokens: 695, avg length: 695.0, speed: 70.8 tok/s
+vLLM generation done - elapsed time: 11.73s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 87.3 tok/s
+{'loss': 0.0053, 'grad_norm': 0.036762163043022156, 'learning_rate': 4.955163043478261e-06, 'on_policy_loss': 0.0053, 'epoch': 0.01}
+vLLM generation done - elapsed time: 11.18s, prompts: 1, total tokens: 852, avg length: 852.0, speed: 76.2 tok/s
+vLLM generation done - elapsed time: 10.92s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.8 tok/s
+vLLM generation done - elapsed time: 11.49s, prompts: 1, total tokens: 371, avg length: 371.0, speed: 32.3 tok/s
+vLLM generation done - elapsed time: 10.81s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 94.7 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_35.json
+================================================================================
+
+{'loss': 0.0036, 'grad_norm': 0.03639316186308861, 'learning_rate': 4.952445652173913e-06, 'on_policy_loss': 0.0036, 'epoch': 0.01}
+vLLM generation done - elapsed time: 10.50s, prompts: 1, total tokens: 787, avg length: 787.0, speed: 74.9 tok/s
+vLLM generation done - elapsed time: 11.20s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.4 tok/s
+vLLM generation done - elapsed time: 11.47s, prompts: 1, total tokens: 829, avg length: 829.0, speed: 72.3 tok/s
+vLLM generation done - elapsed time: 11.54s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 88.7 tok/s
+{'loss': 0.0051, 'grad_norm': 0.03440834954380989, 'learning_rate': 4.9497282608695655e-06, 'on_policy_loss': 0.0051, 'epoch': 0.01}
+vLLM generation done - elapsed time: 10.73s, prompts: 1, total tokens: 862, avg length: 862.0, speed: 80.3 tok/s
+vLLM generation done - elapsed time: 10.78s, prompts: 1, total tokens: 589, avg length: 589.0, speed: 54.6 tok/s
+vLLM generation done - elapsed time: 11.26s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.0 tok/s
+vLLM generation done - elapsed time: 10.92s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.8 tok/s
+{'loss': 0.0065, 'grad_norm': 0.036509815603494644, 'learning_rate': 4.947010869565218e-06, 'on_policy_loss': 0.0065, 'epoch': 0.01}
+vLLM generation done - elapsed time: 10.70s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 95.7 tok/s
+vLLM generation done - elapsed time: 11.02s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.9 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_40.json
+================================================================================
+
+vLLM generation done - elapsed time: 10.89s, prompts: 1, total tokens: 388, avg length: 388.0, speed: 35.6 tok/s
+vLLM generation done - elapsed time: 11.11s, prompts: 1, total tokens: 649, avg length: 649.0, speed: 58.4 tok/s
+{'loss': 0.0076, 'grad_norm': 0.06133704259991646, 'learning_rate': 4.94429347826087e-06, 'on_policy_loss': 0.0076, 'epoch': 0.01}
+vLLM generation done - elapsed time: 11.45s, prompts: 1, total tokens: 676, avg length: 676.0, speed: 59.0 tok/s
+vLLM generation done - elapsed time: 11.17s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.6 tok/s
+vLLM generation done - elapsed time: 11.19s, prompts: 1, total tokens: 246, avg length: 246.0, speed: 22.0 tok/s
+vLLM generation done - elapsed time: 10.01s, prompts: 1, total tokens: 748, avg length: 748.0, speed: 74.7 tok/s
+{'loss': 0.0064, 'grad_norm': 0.04265879467129707, 'learning_rate': 4.941576086956522e-06, 'on_policy_loss': 0.0064, 'epoch': 0.01}
+vLLM generation done - elapsed time: 10.72s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 95.5 tok/s
+vLLM generation done - elapsed time: 11.25s, prompts: 1, total tokens: 700, avg length: 700.0, speed: 62.2 tok/s
+vLLM generation done - elapsed time: 10.98s, prompts: 1, total tokens: 572, avg length: 572.0, speed: 52.1 tok/s
+vLLM generation done - elapsed time: 11.60s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 88.3 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_45.json
+================================================================================
+
+{'loss': 0.0101, 'grad_norm': 0.03724168241024017, 'learning_rate': 4.938858695652175e-06, 'on_policy_loss': 0.0101, 'epoch': 0.01}
+vLLM generation done - elapsed time: 10.71s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 95.6 tok/s
+vLLM generation done - elapsed time: 10.89s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 94.0 tok/s
+vLLM generation done - elapsed time: 11.00s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.1 tok/s
+vLLM generation done - elapsed time: 11.30s, prompts: 1, total tokens: 515, avg length: 515.0, speed: 45.6 tok/s
+{'loss': 0.0099, 'grad_norm': 0.04372264817357063, 'learning_rate': 4.936141304347826e-06, 'on_policy_loss': 0.0099, 'epoch': 0.01}
+vLLM generation done - elapsed time: 11.07s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.5 tok/s
+vLLM generation done - elapsed time: 11.71s, prompts: 1, total tokens: 977, avg length: 977.0, speed: 83.4 tok/s
+vLLM generation done - elapsed time: 11.29s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.7 tok/s
+vLLM generation done - elapsed time: 11.35s, prompts: 1, total tokens: 971, avg length: 971.0, speed: 85.5 tok/s
+{'loss': 0.0093, 'grad_norm': 0.04590802267193794, 'learning_rate': 4.933423913043479e-06, 'on_policy_loss': 0.0093, 'epoch': 0.01}
+vLLM generation done - elapsed time: 11.53s, prompts: 1, total tokens: 259, avg length: 259.0, speed: 22.5 tok/s
+  warnings.warn(
+vLLM generation done - elapsed time: 11.20s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.4 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_50.json
+================================================================================
+  2%|▊                                               | 60/3680 [27:06<27:20:47, 27.20s/it]
+
+vLLM generation done - elapsed time: 11.09s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.3 tok/s
+vLLM generation done - elapsed time: 11.07s, prompts: 1, total tokens: 389, avg length: 389.0, speed: 35.1 tok/s
+{'loss': 0.0135, 'grad_norm': 0.08043240755796432, 'learning_rate': 4.930706521739131e-06, 'on_policy_loss': 0.0135, 'epoch': 0.01}
+vLLM generation done - elapsed time: 11.75s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 87.2 tok/s
+vLLM generation done - elapsed time: 11.71s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 87.5 tok/s
+vLLM generation done - elapsed time: 11.42s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 89.7 tok/s
+vLLM generation done - elapsed time: 11.47s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 89.3 tok/s
+{'loss': 0.0154, 'grad_norm': 0.048161789774894714, 'learning_rate': 4.927989130434783e-06, 'on_policy_loss': 0.0154, 'epoch': 0.01}
+vLLM generation done - elapsed time: 11.30s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.6 tok/s
+vLLM generation done - elapsed time: 11.28s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.7 tok/s
+vLLM generation done - elapsed time: 11.02s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.9 tok/s
+vLLM generation done - elapsed time: 11.20s, prompts: 1, total tokens: 775, avg length: 775.0, speed: 69.2 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_55.json
+================================================================================
+
+{'loss': 0.0103, 'grad_norm': 0.06026359647512436, 'learning_rate': 4.925271739130435e-06, 'on_policy_loss': 0.0103, 'epoch': 0.02}
+vLLM generation done - elapsed time: 5.16s, prompts: 1, total tokens: 466, avg length: 466.0, speed: 90.3 tok/s
+vLLM generation done - elapsed time: 11.13s, prompts: 1, total tokens: 962, avg length: 962.0, speed: 86.5 tok/s
+vLLM generation done - elapsed time: 11.24s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.1 tok/s
+vLLM generation done - elapsed time: 11.13s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.0 tok/s
+{'loss': 0.0164, 'grad_norm': 0.07390399277210236, 'learning_rate': 4.922554347826087e-06, 'on_policy_loss': 0.0164, 'epoch': 0.02}
+vLLM generation done - elapsed time: 11.18s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.6 tok/s
+vLLM generation done - elapsed time: 12.32s, prompts: 1, total tokens: 709, avg length: 709.0, speed: 57.5 tok/s
+vLLM generation done - elapsed time: 11.68s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 87.7 tok/s
+vLLM generation done - elapsed time: 11.51s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 88.9 tok/s
+{'loss': 0.0158, 'grad_norm': 0.09000826627016068, 'learning_rate': 4.91983695652174e-06, 'on_policy_loss': 0.0158, 'epoch': 0.02}
+vLLM generation done - elapsed time: 12.13s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 84.4 tok/s
+vLLM generation done - elapsed time: 11.01s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.0 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_60.json
+================================================================================
+
+vLLM generation done - elapsed time: 12.15s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 84.3 tok/s
+vLLM generation done - elapsed time: 11.00s, prompts: 1, total tokens: 610, avg length: 610.0, speed: 55.5 tok/s
+{'loss': 0.0153, 'grad_norm': 0.18019267916679382, 'learning_rate': 4.917119565217392e-06, 'on_policy_loss': 0.0153, 'epoch': 0.02}
+vLLM generation done - elapsed time: 10.86s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 94.3 tok/s
+vLLM generation done - elapsed time: 11.00s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.1 tok/s
+vLLM generation done - elapsed time: 11.64s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 88.0 tok/s
+vLLM generation done - elapsed time: 10.87s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 94.2 tok/s
+{'loss': 0.0166, 'grad_norm': 0.0940745547413826, 'learning_rate': 4.914402173913044e-06, 'on_policy_loss': 0.0166, 'epoch': 0.02}
+vLLM generation done - elapsed time: 11.91s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 86.0 tok/s
+vLLM generation done - elapsed time: 11.35s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.2 tok/s
+vLLM generation done - elapsed time: 10.93s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.7 tok/s
+vLLM generation done - elapsed time: 4.40s, prompts: 1, total tokens: 378, avg length: 378.0, speed: 86.0 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_65.json
+================================================================================
+
+{'loss': 0.0198, 'grad_norm': 0.13007476925849915, 'learning_rate': 4.9116847826086965e-06, 'on_policy_loss': 0.0198, 'epoch': 0.02}
+vLLM generation done - elapsed time: 11.47s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 89.3 tok/s
+vLLM generation done - elapsed time: 11.60s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 88.3 tok/s
+vLLM generation done - elapsed time: 11.25s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.0 tok/s
+vLLM generation done - elapsed time: 11.50s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 89.0 tok/s
+{'loss': 0.0188, 'grad_norm': 0.07495961338281631, 'learning_rate': 4.908967391304348e-06, 'on_policy_loss': 0.0188, 'epoch': 0.02}
+vLLM generation done - elapsed time: 10.77s, prompts: 1, total tokens: 773, avg length: 773.0, speed: 71.8 tok/s
+vLLM generation done - elapsed time: 11.47s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 89.3 tok/s
+vLLM generation done - elapsed time: 10.50s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 97.5 tok/s
+vLLM generation done - elapsed time: 10.50s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 97.5 tok/s
+{'loss': 0.015, 'grad_norm': 0.04402820020914078, 'learning_rate': 4.90625e-06, 'on_policy_loss': 0.015, 'epoch': 0.02}
+vLLM generation done - elapsed time: 11.84s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 86.5 tok/s
+vLLM generation done - elapsed time: 11.80s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 86.8 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_70.json
+================================================================================
+
+vLLM generation done - elapsed time: 11.51s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 88.9 tok/s
+vLLM generation done - elapsed time: 12.09s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 84.7 tok/s
+{'loss': 0.0183, 'grad_norm': 0.0803651437163353, 'learning_rate': 4.903532608695652e-06, 'on_policy_loss': 0.0183, 'epoch': 0.02}
+vLLM generation done - elapsed time: 11.26s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.0 tok/s
+vLLM generation done - elapsed time: 11.21s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.3 tok/s
+vLLM generation done - elapsed time: 10.74s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 95.4 tok/s
+vLLM generation done - elapsed time: 11.78s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 86.9 tok/s
+{'loss': 0.0186, 'grad_norm': 0.05806334316730499, 'learning_rate': 4.900815217391305e-06, 'on_policy_loss': 0.0186, 'epoch': 0.02}
+vLLM generation done - elapsed time: 11.38s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.0 tok/s
+vLLM generation done - elapsed time: 12.21s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 83.9 tok/s
+vLLM generation done - elapsed time: 11.25s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.0 tok/s
+  warnings.warn(
+vLLM generation done - elapsed time: 11.31s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.5 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_75.json
+================================================================================
+  2%|█                                               | 85/3680 [38:29<26:47:25, 26.83s/it]
+
+{'loss': 0.0199, 'grad_norm': 0.058020032942295074, 'learning_rate': 4.898097826086957e-06, 'on_policy_loss': 0.0199, 'epoch': 0.02}
+vLLM generation done - elapsed time: 11.16s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.7 tok/s
+vLLM generation done - elapsed time: 10.21s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 100.3 tok/s
+vLLM generation done - elapsed time: 11.49s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 89.2 tok/s
+vLLM generation done - elapsed time: 11.08s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.4 tok/s
+{'loss': 0.017, 'grad_norm': 0.0589129813015461, 'learning_rate': 4.895380434782609e-06, 'on_policy_loss': 0.017, 'epoch': 0.02}
+vLLM generation done - elapsed time: 11.84s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 86.5 tok/s
+vLLM generation done - elapsed time: 11.33s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.4 tok/s
+vLLM generation done - elapsed time: 11.23s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.2 tok/s
+vLLM generation done - elapsed time: 11.28s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.8 tok/s
+{'loss': 0.018, 'grad_norm': 0.06973972171545029, 'learning_rate': 4.8926630434782615e-06, 'on_policy_loss': 0.018, 'epoch': 0.02}
+vLLM generation done - elapsed time: 10.86s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 94.3 tok/s
+vLLM generation done - elapsed time: 10.77s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 95.1 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_80.json
+================================================================================
+
+vLLM generation done - elapsed time: 11.00s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.1 tok/s
+vLLM generation done - elapsed time: 10.62s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 96.4 tok/s
+{'loss': 0.018, 'grad_norm': 0.05961231142282486, 'learning_rate': 4.889945652173913e-06, 'on_policy_loss': 0.018, 'epoch': 0.02}
+vLLM generation done - elapsed time: 11.17s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.6 tok/s
+vLLM generation done - elapsed time: 12.06s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 84.9 tok/s
+vLLM generation done - elapsed time: 11.07s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.5 tok/s
+vLLM generation done - elapsed time: 10.88s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 94.1 tok/s
+{'loss': 0.0174, 'grad_norm': 0.04968904331326485, 'learning_rate': 4.887228260869566e-06, 'on_policy_loss': 0.0174, 'epoch': 0.02}
+vLLM generation done - elapsed time: 10.86s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 94.3 tok/s
+vLLM generation done - elapsed time: 12.33s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 83.1 tok/s
+vLLM generation done - elapsed time: 11.99s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 85.4 tok/s
+vLLM generation done - elapsed time: 11.38s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.0 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_85.json
+================================================================================
+
+{'loss': 0.0185, 'grad_norm': 0.04538050666451454, 'learning_rate': 4.884510869565217e-06, 'on_policy_loss': 0.0185, 'epoch': 0.02}
+vLLM generation done - elapsed time: 11.74s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 87.2 tok/s
+vLLM generation done - elapsed time: 11.82s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 86.6 tok/s
+vLLM generation done - elapsed time: 11.20s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.4 tok/s
+vLLM generation done - elapsed time: 11.02s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.9 tok/s
+{'loss': 0.0173, 'grad_norm': 0.057971030473709106, 'learning_rate': 4.88179347826087e-06, 'on_policy_loss': 0.0173, 'epoch': 0.02}
+vLLM generation done - elapsed time: 11.04s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.8 tok/s
+vLLM generation done - elapsed time: 11.31s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.5 tok/s
+vLLM generation done - elapsed time: 10.66s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 96.0 tok/s
+vLLM generation done - elapsed time: 11.44s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 89.5 tok/s
+{'loss': 0.0211, 'grad_norm': 0.056635212153196335, 'learning_rate': 4.879076086956522e-06, 'on_policy_loss': 0.0211, 'epoch': 0.02}
+vLLM generation done - elapsed time: 11.18s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.6 tok/s
+vLLM generation done - elapsed time: 11.05s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.7 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_90.json
+================================================================================
+
+vLLM generation done - elapsed time: 11.02s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.9 tok/s
+vLLM generation done - elapsed time: 11.38s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.0 tok/s
+{'loss': 0.0199, 'grad_norm': 0.052753958851099014, 'learning_rate': 4.876358695652174e-06, 'on_policy_loss': 0.0199, 'epoch': 0.03}
+vLLM generation done - elapsed time: 11.09s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.3 tok/s
+vLLM generation done - elapsed time: 10.91s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.9 tok/s
+vLLM generation done - elapsed time: 11.34s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.3 tok/s
+vLLM generation done - elapsed time: 11.46s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 89.4 tok/s
+{'loss': 0.0168, 'grad_norm': 0.0452781617641449, 'learning_rate': 4.873641304347827e-06, 'on_policy_loss': 0.0168, 'epoch': 0.03}
+vLLM generation done - elapsed time: 11.14s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.9 tok/s
+vLLM generation done - elapsed time: 11.29s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.7 tok/s
+vLLM generation done - elapsed time: 11.45s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 89.4 tok/s
+vLLM generation done - elapsed time: 10.88s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 94.1 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_95.json
+================================================================================
+
+{'loss': 0.0192, 'grad_norm': 0.041660964488983154, 'learning_rate': 4.870923913043479e-06, 'on_policy_loss': 0.0192, 'epoch': 0.03}
+vLLM generation done - elapsed time: 11.47s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 89.2 tok/s
+vLLM generation done - elapsed time: 12.14s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 84.3 tok/s
+vLLM generation done - elapsed time: 10.85s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 94.4 tok/s
+vLLM generation done - elapsed time: 12.19s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 84.0 tok/s
+{'loss': 0.0206, 'grad_norm': 0.04501381888985634, 'learning_rate': 4.868206521739131e-06, 'on_policy_loss': 0.0206, 'epoch': 0.03}
+vLLM generation done - elapsed time: 11.80s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 86.8 tok/s
+vLLM generation done - elapsed time: 11.92s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 85.9 tok/s
+vLLM generation done - elapsed time: 11.13s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.0 tok/s
+vLLM generation done - elapsed time: 10.52s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 97.3 tok/s
+{'loss': 0.0249, 'grad_norm': 0.06530094146728516, 'learning_rate': 4.865489130434783e-06, 'on_policy_loss': 0.0249, 'epoch': 0.03}
+vLLM generation done - elapsed time: 12.05s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 85.0 tok/s
+  warnings.warn(
+vLLM generation done - elapsed time: 11.43s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 89.6 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_100.json
+================================================================================
+  3%|█▎                                             | 103/3680 [46:50<29:36:47, 29.80s/it]
+
+vLLM generation done - elapsed time: 10.87s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 94.2 tok/s
+vLLM generation done - elapsed time: 11.54s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 88.7 tok/s
+{'loss': 0.0214, 'grad_norm': 0.0523635633289814, 'learning_rate': 4.862771739130435e-06, 'on_policy_loss': 0.0214, 'epoch': 0.03}
+vLLM generation done - elapsed time: 12.34s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 83.0 tok/s
+vLLM generation done - elapsed time: 11.87s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 86.3 tok/s
+vLLM generation done - elapsed time: 12.24s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 83.7 tok/s
+
+================================================================================
+STUDENT GENERATION SAMPLE (Step 103):
+================================================================================
+
+Prompt:
+<|im_start|>user
+Problem: The ratio of the width to the height of a rectangular screen is 3:2. If the length of a diagonal of the screen is 65 cm, what is the area of the screen in cm²?
+
+Please reason step by step, and put your final answer within \boxed{}.<|im_end|>
+<|im_start|>assistant
+
+
+Completion:
+This problem gives me a ratio of sides to a rectangular screen, and asks me to find the area based on the diagonal — which is not a side directly, nor is the diagonal itself part of the ratio given, so I must somehow link those things logically, step by step.
+
+Let me begin by acknowledging that the rectangle's width and height do not have absolute values given — they are only known in proportion — 3 to 2. That suggests I should treat this rectangle as a scalable figure, perhaps using a proportional placeholder. I could assign variable placeholders without losing meaning — which would be the essence of algebraic reasoning in geometry — and see whether it's possible to avoid getting caught up in specific lengths too early.
+
+That is to say: let’s try treating the width as three units and the height as two units, because ratios don’t care about actual dimensions — they care about relative ones — so I may not go wrong doing this, even when I’m not given actual units like feet or inches — just proportions and the diagonal distance.
+
+I’m thinking about whether the diagonal can be thought of with coordinates if this rectangle were centered at origin — but I don’t need to do that yet — it is sufficient to think geometrically from a direct application of Pythagoras' Theorem (because rectangle’s diagonal cuts off a right triangle with legs = the sides of rectangle). If the rectangle sides are the legs of a triangle with a right angle — I'm already implicitly using this fact — so it makes sense that diagonal squared should be leg one squared + leg two squared, even if I don’t call that out yet.
+
+So if width is x — then I can represent it as 3a for a scalar scaling constant a — or maybe I should say 3 units instead for simplicity — the real issue lies not in scaling but how it relates to actual measurements. It’s actually quite important for this problem that I don't immediately assign numerical values to the 3 parts, since I might misalign scaling later — so I'll try to assign symbolic variables but keep the scaling constant a.
+
+Let’s say width is 3a, and height is 2a — where “a” is a scalar to maintain proportional integrity — and this preserves the 3:2 ratio. In fact, that’s a brilliant method — you don't actually even have to pick actual values until you solve — it becomes a way to “encode the constraint.” That is — if a were known to be some numerical value — say 10 — then width = 30 and height = 20 — the diagonal would be 10 times a Pythagorean triple — but it could be anything.
+
+But here, I’m told that actual length of diagonal is 65 cm — so — what if instead — I simply assume that this ratio is the same as some multiple of the triangle sides in an idealized scaled model where the diagonal is 65? But I'm not getting ahead — the math works better if I assign variables in abstract proportion — then connect them to a known actual length.
+
+So this method works: suppose my “units” here — width is 3u, height is 2u — and they remain symbolic — but then, in the actual rectangle — since diagonal is the hypotenuse of this triangle of side lengths 3u and 2u — then the diagonal squared must equal the squares of 3u + 2u — i.e., (3u) squared + (2u) squared — so — it's not arbitrary, since u is not arbitrary — because if I let u be variable — then that is the only way to keep proportions — then connect to actual length — I can solve for u.
+
+The whole purpose of the problem is to realize, from nothing else given, that without actual lengths — I can't solve — until I introduce a scaling variable — like u — because I will never be able to use Pythagorean’s formula unless I have something that actually measures something — but wait — Pythagorean doesn’t need actual measurements, it can just accept variable lengths — if I know that the right angles, then sides squared summed, equal diagonal squared — and if this is abstract — I can proceed — the problem will be solved.
+
+What’s actually going on is that I am using math to model what can happen — by building an equation — so I can use what is provided as constraint — I think I’m getting myself into abstraction too fast.
+
+So now that I'm thinking again — perhaps it's better to imagine that the rectangle's width is not necessarily known yet — but I will assume it is exactly 3 times some unknown unit, which I'll denote by a — and the height will then be twice that unit — since I can preserve the exact ratio through scaling. That’s like scaling the rectangle with a “scale factor.” Now — when I do the math — I can proceed to calculate what happens — if I don't actually know the length of the diagonal.
+
+What if I had chosen this scale factor a,
+================================================================================
+
+vLLM generation done - elapsed time: 11.34s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.3 tok/s
+{'loss': 0.0207, 'grad_norm': 0.04020421952009201, 'learning_rate': 4.8600543478260875e-06, 'on_policy_loss': 0.0207, 'epoch': 0.03}
+vLLM generation done - elapsed time: 11.40s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 89.9 tok/s
+vLLM generation done - elapsed time: 12.22s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 83.8 tok/s
+vLLM generation done - elapsed time: 11.13s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.0 tok/s
+vLLM generation done - elapsed time: 11.08s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.4 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_105.json
+================================================================================
+
+{'loss': 0.0216, 'grad_norm': 0.05335991084575653, 'learning_rate': 4.857336956521739e-06, 'on_policy_loss': 0.0216, 'epoch': 0.03}
+vLLM generation done - elapsed time: 11.03s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.8 tok/s
+vLLM generation done - elapsed time: 12.33s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 83.0 tok/s
+vLLM generation done - elapsed time: 11.98s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 85.5 tok/s
+vLLM generation done - elapsed time: 11.05s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.6 tok/s
+{'loss': 0.0204, 'grad_norm': 0.04369329288601875, 'learning_rate': 4.854619565217392e-06, 'on_policy_loss': 0.0204, 'epoch': 0.03}
+vLLM generation done - elapsed time: 11.33s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.3 tok/s
+vLLM generation done - elapsed time: 10.76s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 95.2 tok/s
+vLLM generation done - elapsed time: 10.40s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 98.5 tok/s
+vLLM generation done - elapsed time: 10.82s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 94.6 tok/s
+{'loss': 0.0198, 'grad_norm': 0.03930440917611122, 'learning_rate': 4.851902173913044e-06, 'on_policy_loss': 0.0198, 'epoch': 0.03}
+vLLM generation done - elapsed time: 10.39s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 98.6 tok/s
+vLLM generation done - elapsed time: 10.76s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 95.2 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_110.json
+================================================================================
+
+vLLM generation done - elapsed time: 11.24s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.1 tok/s
+vLLM generation done - elapsed time: 11.32s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.4 tok/s
+{'loss': 0.02, 'grad_norm': 0.046527594327926636, 'learning_rate': 4.849184782608697e-06, 'on_policy_loss': 0.02, 'epoch': 0.03}
+vLLM generation done - elapsed time: 10.78s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 95.0 tok/s
+
+================================================================================
+STUDENT GENERATION SAMPLE (Step 112):
+================================================================================
+
+Prompt:
+<|im_start|>user
+Problem: You need to find out a five-digit phone number by asking questions that can be answered with "yes" or "no". What is the minimum number of questions required to guarantee finding the number (assuming all answers are correct)?
+
+Please reason step by step, and put your final answer within \boxed{}.<|im_end|>
+<|im_start|>assistant
+
+
+Completion:
+Let’s start from the very first premise we all implicitly accept here: we need to uniquely determine a single five-digit number. Since it's five digits, every digit can be anywhere from 0–9 (with the first digit being possibly 1–9 or 0 if the problem allows leading zeros — though phone numbers are sometimes assumed to not start with 0. But the problem doesn’t say we can’t call it an integer, doesn’t specify it must not start with 0. And even if we assume we need a valid phone number, the point is we’re being told that the actual phone number is among some fixed list, so the structure we analyze must include every possible five-digit string, 00000–99999 — otherwise we wouldn’t be trying to narrow to “this one.” That makes the space of possibilities a flat grid that’s easy to think about without worrying about whether leading zeroes are acceptable, because that’s a constraint you don’t get to modify unless you reframe your whole approach — here, since the question never said "nonzero leading digit," the safe and standard choice is that we are allowed to have five-digit string of digits where each of the five digits are from 0 through 9 inclusive — meaning the actual full combinatorial space isn't altered even by phone conventions, because this isn't about “human dialable” logic. So, it’s safer to stick with that — and if you later want to reduce possibilities (to exclude 00000 or 10000 because a phone might not dial it), you could adjust afterward if you want — that doesn't affect reasoning here, because you're only trying to find the minimal theoretical minimum over all possible 5-digit digit combos with digits 0–9, including those not human-readable as “real.” Why? Because the question only specifies “you need to find the phone number,” not “the real phone number, not some random one.” The model assumes you can try anything to narrow to the actual number that you know is fixed. The point is not to get stuck thinking what humans do in reality — the problem wants you to minimize the number of questions from any starting position under any rules, given only “yes/no” questions, if you get all answers correctly, what's the minimum number such that you can always guarantee narrowing to the single actual one. That's the math abstraction. So the model is: you’re not even told which one it is — you just need a decision algorithm, and you need to be prepared for whatever answer path you go down — worst case — because you’re trying to force a guaranteed path, not assume anything about what it’s going to be. This kind of guarantee is what makes it an adversarial problem — if your algorithm is vulnerable to the adversary choosing a “bad” answer path — the worst-case scenario matters for the minimum number — since if there's no guarantee, then the strategy isn't reliable. So, you can't have anything arbitrary depending on what is being assumed to be true without asking — because you’re not assuming anything from the number’s structure or nature — you’re just told it’s a number in a 100,000 point grid, so to cover all possibilities you need to build your strategy to handle anything — even if your guess is wrong — and since the number can be anything you need enough yes/no answers to cover all cases. That’s the only way you’re going to get certainty. If you think about what information you’re gaining, each time you ask a “yes/no,” you can get back a bit of information — yes means one thing, no means another — and each question doesn’t double your info, but rather it splits the universe up by partitioning it — and each time you can think of it not as adding new knowledge on its own, but as forcing a division of current possible choices into either side: so you might think of it as cutting a cake — and you get better at cutting only if each question is useful enough to cut off half the possibilities each time. But if the structure is not symmetrical — you might only be forced to split a smaller number — and you can't just think of the whole thing as "halve it every time" unless your questions are always perfectly designed to always split
+================================================================================
+
+vLLM generation done - elapsed time: 12.26s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 83.5 tok/s
+vLLM generation done - elapsed time: 10.85s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 94.4 tok/s
+vLLM generation done - elapsed time: 11.19s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.5 tok/s
+{'loss': 0.0205, 'grad_norm': 0.046231213957071304, 'learning_rate': 4.846467391304348e-06, 'on_policy_loss': 0.0205, 'epoch': 0.03}
+vLLM generation done - elapsed time: 10.97s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.4 tok/s
+vLLM generation done - elapsed time: 11.95s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 85.7 tok/s
+vLLM generation done - elapsed time: 11.17s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.7 tok/s
+vLLM generation done - elapsed time: 11.47s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 89.3 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /scratch/fs201130/jn20658/opsd_checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_115.json
+================================================================================
+
+{'loss': 0.019, 'grad_norm': 0.056780245155096054, 'learning_rate': 4.84375e-06, 'on_policy_loss': 0.019, 'epoch': 0.03}
+vLLM generation done - elapsed time: 11.89s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 86.1 tok/s
+vLLM generation done - elapsed time: 11.34s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.3 tok/s
+vLLM generation done - elapsed time: 11.32s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.4 tok/s
+vLLM generation done - elapsed time: 11.52s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 88.9 tok/s
+{'loss': 0.0207, 'grad_norm': 0.03763529658317566, 'learning_rate': 4.8410326086956525e-06, 'on_policy_loss': 0.0207, 'epoch': 0.03}
+vLLM generation done - elapsed time: 11.60s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 88.2 tok/s
+vLLM generation done - elapsed time: 11.97s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 85.5 tok/s
+vLLM generation done - elapsed time: 10.97s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.3 tok/s

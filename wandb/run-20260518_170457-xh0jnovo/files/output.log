@@ -1,0 +1,80 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai/
+
+================================================================================
+Loading model with dtype: torch.bfloat16
+Using attention implementation: flash_attention_2
+================================================================================
+
+[DataCollator] Original padding_side: left
+[DataCollator] Set padding_side to: right
+[DataCollator] Reason first mode: False
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards: 100%|████████████████████████████| 4/4 [00:00<00:00, 16.84it/s]
+preprocessor_config.json: 100%|██████████████████████████| 390/390 [00:00<00:00, 2.77MB/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+video_preprocessor_config.json: 100%|████████████████████| 385/385 [00:00<00:00, 2.40MB/s]
+chat_template.json: 5.50kB [00:00, 6.67MB/s]
+Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:01<00:03,  1.31s/it]
+Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:03<00:03,  1.61s/it]
+Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:04<00:01,  1.71s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:05<00:00,  1.39s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:05<00:00,  1.46s/it]
+
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|█| 3/3 [00:00<00:00,  7.18it
+Capturing CUDA graphs (decode, FULL): 100%|█████████████████| 2/2 [00:00<00:00,  9.39it/s]
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 151645, 'bos_token_id': None, 'pad_token_id': 151643}.
+Traceback (most recent call last):
+  File "/home/jn20658/ziwen/OPSD_dc/opsd_train.py", line 299, in <module>
+    trainer.train()
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/trainer.py", line 2325, in train
+    return inner_training_loop(
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/trainer.py", line 2480, in _inner_training_loop
+    model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/accelerate/accelerator.py", line 1551, in prepare
+    result = self._prepare_deepspeed(*args)
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/accelerate/accelerator.py", line 2285, in _prepare_deepspeed
+    optimizer = map_pytorch_optim_to_deepspeed(optimizer)
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/accelerate/utils/deepspeed.py", line 97, in map_pytorch_optim_to_deepspeed
+    return optimizer_class(optimizer.param_groups, **defaults)
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 94, in __init__
+    self.ds_opt_adam = CPUAdamBuilder().load()
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 542, in load
+    return self.jit_load(verbose)
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 574, in jit_load
+    cxx_args = self.strip_empty_entries(self.cxx_args())
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 856, in cxx_args
+    CUDA_ENABLE = self.get_cuda_compile_flag()
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 430, in get_cuda_compile_flag
+    assert_no_cuda_mismatch(self.name)
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 109, in assert_no_cuda_mismatch
+    raise CUDAMismatchException(
+deepspeed.ops.op_builder.builder.CUDAMismatchException: >- DeepSpeed Op Builder: Installed CUDA version 13.0 does not match the version torch was compiled with 12.8, unable to compile cuda/cpp extensions without a matching cuda version.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/jn20658/ziwen/OPSD_dc/opsd_train.py", line 299, in <module>
+[rank0]:     trainer.train()
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/trainer.py", line 2325, in train
+[rank0]:     return inner_training_loop(
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/trainer.py", line 2480, in _inner_training_loop
+[rank0]:     model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/accelerate/accelerator.py", line 1551, in prepare
+[rank0]:     result = self._prepare_deepspeed(*args)
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/accelerate/accelerator.py", line 2285, in _prepare_deepspeed
+[rank0]:     optimizer = map_pytorch_optim_to_deepspeed(optimizer)
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/accelerate/utils/deepspeed.py", line 97, in map_pytorch_optim_to_deepspeed
+[rank0]:     return optimizer_class(optimizer.param_groups, **defaults)
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 94, in __init__
+[rank0]:     self.ds_opt_adam = CPUAdamBuilder().load()
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 542, in load
+[rank0]:     return self.jit_load(verbose)
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 574, in jit_load
+[rank0]:     cxx_args = self.strip_empty_entries(self.cxx_args())
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 856, in cxx_args
+[rank0]:     CUDA_ENABLE = self.get_cuda_compile_flag()
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 430, in get_cuda_compile_flag
+[rank0]:     assert_no_cuda_mismatch(self.name)
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 109, in assert_no_cuda_mismatch
+[rank0]:     raise CUDAMismatchException(
+[rank0]: deepspeed.ops.op_builder.builder.CUDAMismatchException: >- DeepSpeed Op Builder: Installed CUDA version 13.0 does not match the version torch was compiled with 12.8, unable to compile cuda/cpp extensions without a matching cuda version.

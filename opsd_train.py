@@ -231,9 +231,12 @@ if __name__ == "__main__":
         revision=model_args.model_revision,
         trust_remote_code=model_args.trust_remote_code,
         attn_implementation=model_args.attn_implementation or "flash_attention_2",
-        torch_dtype=model_dtype,
-        use_cache=False if training_args.gradient_checkpointing else True,
+        torch_dtype=model_dtype
     )
+    
+    # Only add use_cache for text models; VL models don't support this parameter
+    if "VL" not in model_args.model_name_or_path and "vision" not in model_args.model_name_or_path.lower():
+        model_kwargs["use_cache"] = False if training_args.gradient_checkpointing else True
     quantization_config = get_quantization_config(model_args)
     if quantization_config is not None:
         # Passing None would not be treated the same as omitting the argument, so we include it only when valid.

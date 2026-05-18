@@ -1,0 +1,60 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai/
+
+================================================================================
+Loading model with dtype: torch.bfloat16
+Using attention implementation: flash_attention_2
+================================================================================
+
+[DataCollator] Original padding_side: left
+[DataCollator] Set padding_side to: right
+[DataCollator] Reason first mode: False
+`torch_dtype` is deprecated! Use `dtype` instead!
+model-00003-of-00004.safetensors: 100%|███████████████| 5.00G/5.00G [00:16<00:00, 306MB/s]
+Fetching 4 files: 100%|█████████████████████████████████████| 4/4 [00:27<00:00,  6.80s/it]
+Loading checkpoint shards: 100%|████████████████████████████| 4/4 [00:03<00:00,  1.28it/s]
+generation_config.json: 100%|████████████████████████████| 269/269 [00:00<00:00, 2.27MB/s]
+Converting train dataset to ChatML: 100%|██| 29434/29434 [00:15<00:00, 1961.87 examples/s]
+Tokenizing train dataset: 100%|██████████████| 29434/29434 [08:04<00:00, 60.79 examples/s]
+Truncating train dataset: 100%|████████████| 29434/29434 [00:03<00:00, 9209.70 examples/s]
+Traceback (most recent call last):
+  File "/home/jn20658/ziwen/OPSD_dc/opsd_train.py", line 272, in <module>
+    trainer = OPSDTrainer(
+  File "/home/jn20658/ziwen/OPSD_dc/opsd_trainer.py", line 164, in __init__
+    super().__init__(
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 871, in __init__
+    super().__init__(
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/trainer.py", line 693, in __init__
+    os.makedirs(self.args.output_dir, exist_ok=True)
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/data0'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/jn20658/ziwen/OPSD_dc/opsd_train.py", line 272, in <module>
+[rank0]:     trainer = OPSDTrainer(
+[rank0]:   File "/home/jn20658/ziwen/OPSD_dc/opsd_trainer.py", line 164, in __init__
+[rank0]:     super().__init__(
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 871, in __init__
+[rank0]:     super().__init__(
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+[rank0]:     return func(*args, **kwargs)
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/trainer.py", line 693, in __init__
+[rank0]:     os.makedirs(self.args.output_dir, exist_ok=True)
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/os.py", line 215, in makedirs
+[rank0]:     makedirs(head, exist_ok=exist_ok)
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/os.py", line 215, in makedirs
+[rank0]:     makedirs(head, exist_ok=exist_ok)
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/os.py", line 215, in makedirs
+[rank0]:     makedirs(head, exist_ok=exist_ok)
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/os.py", line 225, in makedirs
+[rank0]:     mkdir(name, mode)
+[rank0]: PermissionError: [Errno 13] Permission denied: '/data0'

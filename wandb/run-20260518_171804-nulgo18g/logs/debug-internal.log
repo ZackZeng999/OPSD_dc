@@ -1,0 +1,12 @@
+{"time":"2026-05-18T17:18:04.741068471+02:00","level":"INFO","msg":"stream: starting","core version":"0.22.3"}
+{"time":"2026-05-18T17:18:05.212083832+02:00","level":"INFO","msg":"stream: created new stream","id":"nulgo18g"}
+{"time":"2026-05-18T17:18:05.212182432+02:00","level":"INFO","msg":"handler: started","stream_id":"nulgo18g"}
+{"time":"2026-05-18T17:18:05.212627964+02:00","level":"INFO","msg":"stream: started","id":"nulgo18g"}
+{"time":"2026-05-18T17:18:05.212641724+02:00","level":"INFO","msg":"writer: started","stream_id":"nulgo18g"}
+{"time":"2026-05-18T17:18:05.212659014+02:00","level":"INFO","msg":"sender: started","stream_id":"nulgo18g"}
+{"time":"2026-05-18T17:31:08.916439497+02:00","level":"ERROR","msg":"runconsolelogs: failed to write to file: failed to write to chunk: failed to append: write /home/jn20658/ziwen/OPSD_dc/wandb/run-20260518_171804-nulgo18g/files/output.log: disk quota exceeded"}
+{"time":"2026-05-18T17:31:08.941055341+02:00","level":"INFO","msg":"stream: closing","id":"nulgo18g"}
+{"time":"2026-05-18T17:31:09.620261195+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-18T17:31:10.075264352+02:00","level":"INFO","msg":"handler: closed","stream_id":"nulgo18g"}
+{"time":"2026-05-18T17:31:10.079678025+02:00","level":"INFO","msg":"sender: closed","stream_id":"nulgo18g"}
+{"time":"2026-05-18T17:31:10.079723895+02:00","level":"INFO","msg":"stream: closed","id":"nulgo18g"}

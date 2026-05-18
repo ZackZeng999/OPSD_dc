@@ -1,0 +1,249 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai/
+
+================================================================================
+Loading model with dtype: torch.bfloat16
+Using attention implementation: flash_attention_2
+================================================================================
+
+[DataCollator] Original padding_side: left
+[DataCollator] Set padding_side to: right
+[DataCollator] Reason first mode: False
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards: 100%|████████████████████████████| 4/4 [00:00<00:00, 13.12it/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:00<00:02,  1.24it/s]
+Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:01<00:01,  1.32it/s]
+Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:02<00:00,  1.52it/s]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:02<00:00,  1.71it/s]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:02<00:00,  1.57it/s]
+
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|█| 3/3 [00:00<00:00,  6.87it
+Capturing CUDA graphs (decode, FULL): 100%|█████████████████| 2/2 [00:00<00:00,  8.98it/s]
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 151645, 'bos_token_id': None, 'pad_token_id': 151643}.
+  0%|                                                            | 0/3680 [00:00<?, ?it/s]`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+vLLM generation done - elapsed time: 13.35s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 76.7 tok/s
+/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+vLLM generation done - elapsed time: 11.65s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 87.9 tok/s
+  0%|                                                 | 1/3680 [00:28<28:48:33, 28.19s/it]/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+vLLM generation done - elapsed time: 12.56s, prompts: 1, total tokens: 345, avg length: 345.0, speed: 27.5 tok/s
+  warnings.warn(
+vLLM generation done - elapsed time: 11.27s, prompts: 1, total tokens: 519, avg length: 519.0, speed: 46.0 tok/s
+  0%|▏                                               | 10/3680 [04:36<27:19:39, 26.81s/it]
+{'loss': 0.001, 'grad_norm': 0.03900710120797157, 'learning_rate': 4.998641304347826e-06, 'on_policy_loss': 0.001, 'epoch': 0.0}
+vLLM generation done - elapsed time: 10.89s, prompts: 1, total tokens: 213, avg length: 213.0, speed: 19.6 tok/s
+vLLM generation done - elapsed time: 11.71s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 87.4 tok/s
+vLLM generation done - elapsed time: 11.27s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.9 tok/s
+vLLM generation done - elapsed time: 11.90s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 86.1 tok/s
+{'loss': 0.0033, 'grad_norm': 0.025959845632314682, 'learning_rate': 4.995923913043479e-06, 'on_policy_loss': 0.0033, 'epoch': 0.0}
+vLLM generation done - elapsed time: 11.62s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 88.1 tok/s
+vLLM generation done - elapsed time: 12.22s, prompts: 1, total tokens: 628, avg length: 628.0, speed: 51.4 tok/s
+vLLM generation done - elapsed time: 11.01s, prompts: 1, total tokens: 993, avg length: 993.0, speed: 90.2 tok/s
+vLLM generation done - elapsed time: 11.34s, prompts: 1, total tokens: 946, avg length: 946.0, speed: 83.4 tok/s
+
+================================================================================
+Saved 12 generation outputs to:
+  /home/jn20658/ziwen/OPSD_dc/checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_5.json
+================================================================================
+
+{'loss': 0.0023, 'grad_norm': 0.041792962700128555, 'learning_rate': 4.99320652173913e-06, 'on_policy_loss': 0.0023, 'epoch': 0.0}
+vLLM generation done - elapsed time: 13.62s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 75.2 tok/s
+vLLM generation done - elapsed time: 11.37s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.1 tok/s
+vLLM generation done - elapsed time: 10.73s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 95.4 tok/s
+vLLM generation done - elapsed time: 11.08s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 92.5 tok/s
+{'loss': 0.0023, 'grad_norm': 0.03694283962249756, 'learning_rate': 4.990489130434783e-06, 'on_policy_loss': 0.0023, 'epoch': 0.0}
+vLLM generation done - elapsed time: 10.08s, prompts: 1, total tokens: 183, avg length: 183.0, speed: 18.1 tok/s
+vLLM generation done - elapsed time: 11.50s, prompts: 1, total tokens: 554, avg length: 554.0, speed: 48.2 tok/s
+vLLM generation done - elapsed time: 10.57s, prompts: 1, total tokens: 1005, avg length: 1005.0, speed: 95.1 tok/s
+vLLM generation done - elapsed time: 8.36s, prompts: 1, total tokens: 735, avg length: 735.0, speed: 87.9 tok/s
+{'loss': 0.0021, 'grad_norm': 0.028989480808377266, 'learning_rate': 4.9877717391304354e-06, 'on_policy_loss': 0.0021, 'epoch': 0.0}
+vLLM generation done - elapsed time: 10.66s, prompts: 1, total tokens: 485, avg length: 485.0, speed: 45.5 tok/s
+vLLM generation done - elapsed time: 10.96s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.5 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /home/jn20658/ziwen/OPSD_dc/checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_10.json
+================================================================================
+
+vLLM generation done - elapsed time: 11.66s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 87.8 tok/s
+vLLM generation done - elapsed time: 11.44s, prompts: 1, total tokens: 739, avg length: 739.0, speed: 64.6 tok/s
+{'loss': 0.0003, 'grad_norm': 0.026836518198251724, 'learning_rate': 4.985054347826087e-06, 'on_policy_loss': 0.0003, 'epoch': 0.0}
+vLLM generation done - elapsed time: 10.94s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.6 tok/s
+vLLM generation done - elapsed time: 11.23s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 91.2 tok/s
+vLLM generation done - elapsed time: 12.24s, prompts: 1, total tokens: 992, avg length: 992.0, speed: 81.0 tok/s
+vLLM generation done - elapsed time: 10.93s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.7 tok/s
+{'loss': 0.0056, 'grad_norm': 0.03661496192216873, 'learning_rate': 4.98233695652174e-06, 'on_policy_loss': 0.0056, 'epoch': 0.0}
+vLLM generation done - elapsed time: 11.35s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 90.2 tok/s
+vLLM generation done - elapsed time: 11.47s, prompts: 1, total tokens: 1007, avg length: 1007.0, speed: 87.8 tok/s
+vLLM generation done - elapsed time: 11.11s, prompts: 1, total tokens: 475, avg length: 475.0, speed: 42.7 tok/s
+vLLM generation done - elapsed time: 10.66s, prompts: 1, total tokens: 350, avg length: 350.0, speed: 32.8 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /home/jn20658/ziwen/OPSD_dc/checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_15.json
+================================================================================
+
+{'loss': 0.0022, 'grad_norm': 0.034138042479753494, 'learning_rate': 4.979619565217392e-06, 'on_policy_loss': 0.0022, 'epoch': 0.0}
+vLLM generation done - elapsed time: 9.14s, prompts: 1, total tokens: 490, avg length: 490.0, speed: 53.6 tok/s
+vLLM generation done - elapsed time: 8.85s, prompts: 1, total tokens: 732, avg length: 732.0, speed: 82.7 tok/s
+vLLM generation done - elapsed time: 10.95s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.5 tok/s
+vLLM generation done - elapsed time: 10.96s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.4 tok/s
+{'loss': 0.0041, 'grad_norm': 0.044568076729774475, 'learning_rate': 4.976902173913044e-06, 'on_policy_loss': 0.0041, 'epoch': 0.0}
+vLLM generation done - elapsed time: 11.19s, prompts: 1, total tokens: 691, avg length: 691.0, speed: 61.8 tok/s
+vLLM generation done - elapsed time: 11.50s, prompts: 1, total tokens: 534, avg length: 534.0, speed: 46.4 tok/s
+vLLM generation done - elapsed time: 10.96s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.5 tok/s
+vLLM generation done - elapsed time: 11.29s, prompts: 1, total tokens: 238, avg length: 238.0, speed: 21.1 tok/s
+{'loss': 0.0032, 'grad_norm': 0.029889345169067383, 'learning_rate': 4.9741847826086955e-06, 'on_policy_loss': 0.0032, 'epoch': 0.01}
+vLLM generation done - elapsed time: 11.89s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 86.1 tok/s
+
+================================================================================
+STUDENT GENERATION SAMPLE (Step 20):
+================================================================================
+
+Prompt:
+<|im_start|>user
+Problem: Let \( p(x) = x^4 + ax^3 + bx^2 + cx + d \), where \( a, b, c, d \) are constants, and given that \( p(1) = 1993 \), \( p(2) = 3986 \), and \( p(3) = 5979 \). Calculate \( \frac{1}{4} [p(11) + p(-7)] \).
+
+Please reason step by step, and put your final answer within \boxed{}.<|im_end|>
+<|im_start|>assistant
+
+
+Completion:
+We are given a polynomial:
+
+$$
+p(x) = x^4 + ax^3 + bx^2 + cx + d
+$$
+
+and the values:
+
+- $ p(1) = 1993 $
+- $ p(2) = 3986 $
+- $ p(3) = 5979 $
+
+We are to compute:
+
+$$
+\frac{1}{4} [p(11) + p(-7)]
+$$
+
+---
+
+**Step 1: Observe the pattern in the given values**
+
+Notice:
+
+- $ p(1) = 1993 $
+- $ p(2) = 3986 = 2 \cdot 1993 $
+- $ p(3) = 5979 = 3 \cdot 1993 $
+
+This suggests that for $ x = 1, 2, 3 $, $ p(x) = x \cdot 1993 $
+
+Let’s test that:
+
+- $ 1 \cdot 1993 = 1993 $ ✓
+- $ 2 \cdot 1993 = 3986 $ ✓
+- $ 3 \cdot 1993 = 5979 $ ✓
+
+So, define a new function:
+
+$$
+q(x) = p(x) - 1993x
+$$
+
+Then:
+
+- $ q(1) = p(1) - 1993 \cdot 1 = 1993 - 1993 = 0 $
+- $ q(2) = p(2) - 1993 \cdot 2 = 3986 - 3986 = 0 $
+- $ q(3) = p(3) - 1993 \cdot 3 = 5979 - 5979 = 0 $
+
+Thus, $ q(x) $ has roots at $ x = 1, 2, 3 $
+
+Since $ p(x) $ is a degree 4 polynomial and $ 1993x $ is degree 1, $ q(x) $ is also degree 4.
+
+So, we can write:
+
+$$
+q(x) = (x - 1)(x - 2)(x - 3)(x - r)
+$$
+
+for some constant $ r $, because it's a degree 4 polynomial with known roots at 1, 2, 3, and one more root (since leading coefficient is 1: $ p(x) = x^4 + ... $, so $ q(x) = p(x) - 1993x $, which also has leading coefficient 1).
+
+Thus,
+
+$$
+p(x) = q(x) + 1993x = (x - 1)(x - 2)(x - 3)(x - r) + 1993x
+$$
+
+---
+
+**Step 2: Find the value of $ r $**
+
+To find $ r $, we can plug in another known point. But we have only three points, and we already used them to define the roots. However, since $ p(x) $ is determined by its coefficients, and we have 4 unknowns (a, b, c, d), but we have 3 equations from x=1,2,3, we need one more condition. But perhaps we can find $ r $ using the fact that $ p(x) $ is monic, so the leading coefficient is 1, and that’s already built into our expression.
+
+Wait — let’s check the leading coefficient of $ q(x) $.
+
+$ q(x) = (x-1)(x-2)(x-3)(x - r) $ — expanding this, the leading term is $ x^4 $, so leading coefficient is 1 — matches!
+
+So our expression for $ p(x) $ is correct as is.
+
+But we still have a variable $ r $. How do we find $ r $? We need one more condition. But wait — we don't have a fourth value. Hmm.
+
+Actually, we can use the fact that $ p(x) $ is a quartic polynomial, and since we've expressed it as $ q(x) + 1993x $, and $ q(x) $ has roots at 1,2,3, then perhaps we can use symmetry or another trick.
+
+Alternatively, perhaps we can compute the expression directly without finding $ r $. Let’s look at the target expression:
+
+$$
+\frac{1}{4} [p(11) + p(-7)]
+$$
+
+Since $ p(x) = (x - 1)(x - 2)(x - 3)(x - r) + 1993x $, then:
+
+$$
+p
+================================================================================
+
+vLLM generation done - elapsed time: 11.41s, prompts: 1, total tokens: 609, avg length: 609.0, speed: 53.4 tok/s
+
+================================================================================
+Saved 10 generation outputs to:
+  /home/jn20658/ziwen/OPSD_dc/checkpoints/qwen38b_vl_gen1024_fixteacher_temp11_forwardbeta0_clip006/generations/generations_step_20.json
+================================================================================
+
+vLLM generation done - elapsed time: 10.97s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.3 tok/s
+vLLM generation done - elapsed time: 10.96s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 93.5 tok/s
+{'loss': 0.0039, 'grad_norm': 0.018905382603406906, 'learning_rate': 4.971467391304348e-06, 'on_policy_loss': 0.0039, 'epoch': 0.01}
+vLLM generation done - elapsed time: 11.24s, prompts: 1, total tokens: 528, avg length: 528.0, speed: 47.0 tok/s
+vLLM generation done - elapsed time: 7.13s, prompts: 1, total tokens: 351, avg length: 351.0, speed: 49.3 tok/s
+vLLM generation done - elapsed time: 10.44s, prompts: 1, total tokens: 378, avg length: 378.0, speed: 36.2 tok/s
+vLLM generation done - elapsed time: 7.13s, prompts: 1, total tokens: 331, avg length: 331.0, speed: 46.4 tok/s
+{'loss': 0.0027, 'grad_norm': 0.03656719997525215, 'learning_rate': 4.9687500000000005e-06, 'on_policy_loss': 0.0027, 'epoch': 0.01}
+vLLM generation done - elapsed time: 11.43s, prompts: 1, total tokens: 667, avg length: 667.0, speed: 58.4 tok/s
+vLLM generation done - elapsed time: 10.58s, prompts: 1, total tokens: 1024, avg length: 1024.0, speed: 96.8 tok/s
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/torch/serialization.py", line 967, in save
+    _save(
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/torch/serialization.py", line 1268, in _save
+    zip_file.write_record(name, storage, num_bytes)
+RuntimeError: [enforce fail at inline_container.cc:858] . PytorchStreamWriter failed writing file data/2: file write failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jn20658/ziwen/OPSD_dc/opsd_train.py", line 299, in <module>
+    trainer.train()
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/trainer.py", line 2325, in train
+    return inner_training_loop(
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/trainer.py", line 2756, in _inner_training_loop
+    self._maybe_log_save_evaluate(
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/trainer.py", line 3228, in _maybe_log_save_evaluate
+    self._save_checkpoint(model, trial)
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 1267, in _save_checkpoint
+    super()._save_checkpoint(model, trial)
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/trainer.py", line 3345, in _save_checkpoint
+    self._save_optimizer_and_scheduler(output_dir)
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/trainer.py", line 3459, in _save_optimizer_and_scheduler
+    self.model_wrapped.save_checkpoint(output_dir, exclude_frozen_parameters=True)

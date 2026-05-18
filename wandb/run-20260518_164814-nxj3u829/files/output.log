@@ -1,0 +1,76 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai/
+
+================================================================================
+Loading model with dtype: torch.bfloat16
+Using attention implementation: flash_attention_2
+================================================================================
+Traceback (most recent call last):
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/utils/hub.py", line 479, in cached_files
+    hf_hub_download(
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1131, in _hf_hub_download_to_cache_dir
+    os.makedirs(os.path.dirname(blob_path), exist_ok=True)
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  [Previous line repeated 1 more time]
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/data/fs201130/jn20658'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/jn20658/ziwen/OPSD_dc/opsd_train.py", line 250, in <module>
+    tokenizer = AutoTokenizer.from_pretrained(
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 1073, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 905, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/utils/hub.py", line 322, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/utils/hub.py", line 524, in cached_files
+    raise OSError(
+OSError: PermissionError at /data/fs201130/jn20658 when downloading Qwen/Qwen3-VL-8B-Instruct. Check cache directory permissions. Common causes: 1) another user is downloading the same model (please wait); 2) a previous download was canceled and the lock file needs manual removal.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/utils/hub.py", line 479, in cached_files
+[rank0]:     hf_hub_download(
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+[rank0]:     return _hf_hub_download_to_cache_dir(
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1131, in _hf_hub_download_to_cache_dir
+[rank0]:     os.makedirs(os.path.dirname(blob_path), exist_ok=True)
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/os.py", line 215, in makedirs
+[rank0]:     makedirs(head, exist_ok=exist_ok)
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/os.py", line 215, in makedirs
+[rank0]:     makedirs(head, exist_ok=exist_ok)
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/os.py", line 215, in makedirs
+[rank0]:     makedirs(head, exist_ok=exist_ok)
+[rank0]:   [Previous line repeated 1 more time]
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/os.py", line 225, in makedirs
+[rank0]:     mkdir(name, mode)
+[rank0]: PermissionError: [Errno 13] Permission denied: '/data/fs201130/jn20658'
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/jn20658/ziwen/OPSD_dc/opsd_train.py", line 250, in <module>
+[rank0]:     tokenizer = AutoTokenizer.from_pretrained(
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 1073, in from_pretrained
+[rank0]:     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 905, in get_tokenizer_config
+[rank0]:     resolved_config_file = cached_file(
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/utils/hub.py", line 322, in cached_file
+[rank0]:     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+[rank0]:   File "/scratch/fs201130/jn20658/miniconda3/envs/opsd/lib/python3.10/site-packages/transformers/utils/hub.py", line 524, in cached_files
+[rank0]:     raise OSError(
+[rank0]: OSError: PermissionError at /data/fs201130/jn20658 when downloading Qwen/Qwen3-VL-8B-Instruct. Check cache directory permissions. Common causes: 1) another user is downloading the same model (please wait); 2) a previous download was canceled and the lock file needs manual removal.
